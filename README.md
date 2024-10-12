@@ -25,6 +25,8 @@ The app’s navigation is handled using **go_router**. It simplifies route manag
 ## Countdown Timer with circular_countdown_timer
 The app features a circular countdown timer, created using the **circular_countdown_timer** package. This widget visually represents the countdown and fits the Pomodoro timer's core functionality.
 
+## State Management with Bloc Provider
+We are using **Bloc Provider** for state management. This allows for a clean separation of business logic from the UI, enabling the app to scale efficiently while maintaining code clarity and testability.
 
 ## Summary
 This project aims to replicate the Pomodoro app's design and functionality as outlined in the Figma reference file. We are using Flutter for development, along with packages such as Flutter SVG, go_router, and circular_countdown_timer to implement key features. The typography follows the Poppins font family, ensuring a consistent and modern look. 

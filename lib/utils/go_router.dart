@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pomodoro/main.dart';
 import 'package:pomodoro/screens/home.dart';
+import 'package:pomodoro/screens/main_page.dart';
 import 'package:pomodoro/screens/settings.dart';
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
@@ -30,8 +31,8 @@ final GoRouter router = GoRouter(
       StatefulShellRoute.indexedStack(
       builder: (context, state, navigationShell) {
         // the UI shell
-        return MyHomePage(
-            navigationShell: navigationShell, title: '',);
+        return MainPage(
+            navigationShell: navigationShell,);
       },
       branches: [
         // first branch (A)
