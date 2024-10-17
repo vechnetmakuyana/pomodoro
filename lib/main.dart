@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pomodoro/blocs/bloc/time_bloc.dart';
+import 'package:pomodoro/blocs/cubit/time_cubit.dart';
 import 'package:pomodoro/utils/colors.dart';
 import 'package:pomodoro/utils/go_router.dart';
 
@@ -12,13 +15,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: router,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryColor),
-        useMaterial3: true,
-        textTheme: GoogleFonts.poppinsTextTheme(),
-        scaffoldBackgroundColor: Colors.white,
+    return MultiBlocProvider(
+      providers: [
+       
+        BlocProvider(
+          create: (context) => TimeCubit(),
+        ),
+      ],
+      child: MaterialApp.router(
+        routerConfig: router,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: kPrimaryColor),
+          useMaterial3: true,
+          textTheme: GoogleFonts.poppinsTextTheme(),
+          scaffoldBackgroundColor: Colors.white,
+        ),
       ),
     );
   }

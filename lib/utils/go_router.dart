@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:pomodoro/main.dart';
-import 'package:pomodoro/screens/home.dart';
+import 'package:pomodoro/screens/home/home.dart';
 import 'package:pomodoro/screens/main_page.dart';
 import 'package:pomodoro/screens/settings.dart';
 

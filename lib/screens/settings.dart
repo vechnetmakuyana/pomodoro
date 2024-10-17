@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pomodoro/utils/colors.dart';
+import 'package:pomodoro/widgets/dot.dart';
 
 class Settings extends StatefulWidget {
   const Settings({super.key});
@@ -84,10 +85,10 @@ class _SettingsState extends State<Settings> {
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                      dot(),
-                      dot()
+                      Dot(),
+                      Dot()
 ,
-                      dot()
+                      Dot()
 
                     ],)
                   ],
@@ -157,28 +158,5 @@ class _SettingsState extends State<Settings> {
         ],
       ),
     );
-  }
-}
-
-class dot extends StatelessWidget {
-  const dot({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-                padding: const EdgeInsets.symmetric(
-                  vertical: 8,horizontal: 8
-                ),
-                child: Container(
-                  height: 30,
-                  width: 30,
-                  decoration: const BoxDecoration(
-                    color: Colors.white,
-                    shape: BoxShape.circle,
-                  ),
-                ),
-              );
   }
 }
