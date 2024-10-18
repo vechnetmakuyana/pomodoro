@@ -1,12 +1,16 @@
 
+import 'dart:developer';
+
 import 'package:bloc/bloc.dart';
 import 'package:circular_countdown_timer/circular_countdown_timer.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:pomodoro/modals/settings.dart';
 
 part 'time_state.dart';
 
 class TimeCubit extends Cubit<TimeCubitState> {
   final CountDownController controller = CountDownController();
-
+SettingsModal? settings;
   TimeCubit() : super(const TimeCubitState());
 
   void setPomodoro(int pomodoro) {}
@@ -15,6 +19,12 @@ class TimeCubit extends Cubit<TimeCubitState> {
 
   void setLongBreak(int longBreak) {}
 
+getTime() async {
+    final box = await Hive.openBox<SettingsModal>('settings');
+   settings = box.get('settings') ?? SettingsModal(pomodoro: 25, shortBreak: 5, longBreak: 20);
+   log(settings!.pomodoro.toString());
+   emit(state.copyWith( duration: settings!.pomodoro * 60, pomodoro: settings!.pomodoro, shortBreak: settings!.shortBreak, longBreak: settings!.longBreak));
+}
   void startPomodoro() {
     emit(state.copyWith(
         duration: state.pomodoro! * 60,

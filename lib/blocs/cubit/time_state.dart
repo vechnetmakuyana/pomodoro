@@ -14,14 +14,14 @@ class TimeCubitState {
   final CountDownController? controller;
 
   const TimeCubitState({
-    this.pomodoro=30,
+    this.pomodoro,
     this.isPomodoro=false,
-    this.shortBreak=5,
+    this.shortBreak,
     this.isShortBreak=false,
-    this.longBreak=20,
+    this.longBreak,
     this.isLongBreak=false,
     this.pausedTime=false,
-    this.duration=30*60,
+    this.duration,
     this.timerState = TimerState.pomodoro,
     this.controller,
   });

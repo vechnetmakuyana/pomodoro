@@ -28,5 +28,21 @@ The app features a circular countdown timer, created using the **circular_countd
 ## State Management with Bloc Provider
 We are using **Bloc Provider** for state management. This allows for a clean separation of business logic from the UI, enabling the app to scale efficiently while maintaining code clarity and testability.
 
+## Flutter Hive, JSON Serializable, and Hive Generator
+To handle local storage and serialization, I integrated Flutter Hive, along with JSON Serializable and Hive Generator plugins. These tools facilitate smooth data management and model serialization within the app.
+
 ## Summary
-This project aims to replicate the Pomodoro app's design and functionality as outlined in the Figma reference file. We are using Flutter for development, along with packages such as Flutter SVG, go_router, and circular_countdown_timer to implement key features. The typography follows the Poppins font family, ensuring a consistent and modern look. 
+This project seeks to replicate the design and functionality of the Pomodoro app from the Figma reference. Built using Flutter, the app integrates packages such as Flutter SVG, go_router, circular_countdown_timer, Hive, and more to ensure a smooth and functional experience. With a focus on clean code, scalability, and adherence to design specs, this project is a great exercise in both design and development.
+
+# Screenshots
+
+![Application Logo](assets/images/pomodoro_icon.jpeg)
+
+![Screenshot 1](assets/images/home.jpeg)
+
+![Screenshot 2](assets/images/settings.jpeg)
+
+# Gif
+![App walk through gif](assets/images/pmomodoro_app.gif)
+
+
