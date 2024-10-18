@@ -43,6 +43,6 @@ This project seeks to replicate the design and functionality of the Pomodoro app
 ![Screenshot 2](assets/images/settings.jpeg)
 
 # Gif
-![App walk through gif](assets/images/pmomodoro_app.gif)
+![App walk through gif](assets/images/pomodoro_app.gif)
 
 
